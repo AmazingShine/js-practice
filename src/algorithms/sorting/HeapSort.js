@@ -17,20 +17,20 @@ function adjust(arr, p_idx, length) {
 }
 
 function buildHeap(arr) {
-    for (i = parseInt(arr.length / 2) - 1; i >= 0; i--) {
+    for (let i = parseInt(arr.length / 2) - 1; i >= 0; i--) {
         adjust(arr, i, arr.length)
     }
 }
 
-function HeapSort(arr) {
+export default function heapSort(arr) {
     buildHeap(arr)
     for (let i = arr.length - 1; i > 0; i--) {
         [arr[i], arr[0]] = [arr[0], arr[i]];
         adjust(arr, 0, i)
-
     }
+    return arr
 }
 
-arr = [6, 7, 2, 5, 1, 8, 9, 11, 55, 22, 3, 1, 98, 33]
-HeapSort(arr)
-console.log(arr)
+// arr = [6, 7, 2, 5, 1, 8, 9, 11, 55, 22, 3, 1, 98, 33]
+// HeapSort(arr)
+// console.log(arr)

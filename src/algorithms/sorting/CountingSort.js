@@ -1,5 +1,6 @@
-function CountingSort(arr) {
+export default function countingSort(arr) {
     // step 1 - count
+    if (arr.length == 0) return arr;
     let max = Math.max(...arr);
     let countArr = new Array(max + 1).fill(0);
     for (let i = 0; i < arr.length; i++) {
@@ -20,6 +21,6 @@ function CountingSort(arr) {
     return newArr
 }
 
-let a = [2, 8, 4, 5, 4, 1, 7, 0]
-let b = CountingSort(a)
-console.log(b)
+// let a = [2, 8, 4, 5, 4, 1, 7, 0]
+// let b = countingSort(a)
+// console.log(b)

@@ -19,18 +19,19 @@ function partition(arr, left, right) {
 }
 
 // in-place
-function _QuickSort(arr, left, right) {
+function _quickSort(arr, left, right) {
   if (left < right) {
     let p = partition(arr, left, right)
-    _QuickSort(arr,left,p-1)
-    _QuickSort(arr,p+1,right)
+    _quickSort(arr,left,p-1)
+    _quickSort(arr,p+1,right)
   }
 }
 
-function QuickSort(arr) {
-  _QuickSort(arr, 0, arr.length - 1)
+export default function quickSort(arr) {
+  _quickSort(arr, 0, arr.length - 1)
+  return arr;
 }
-let arr = [2, 342, 234, 11, 234, 533, 12, 3, 4, 63, 21]
+// let arr = [2, 342, 234, 11, 234, 533, 12, 3, 4, 63, 21]
 
-QuickSort(arr)
-console.log(arr)
+// quickSort(arr)
+// console.log(arr)

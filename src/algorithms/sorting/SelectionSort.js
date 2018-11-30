@@ -1,4 +1,4 @@
-function SelectionSort(arr) {
+export default function selectionSort(arr) {
     let i = 0
     while (i < arr.length){
         let minIndex = i;
@@ -10,7 +10,8 @@ function SelectionSort(arr) {
         [arr[i],arr[minIndex]] = [arr[minIndex],arr[i]]
         i++;
     }
+    return arr
 }
-arr = [2,4,5,1,2,55,3,123,56,7]
-SelectionSort(arr)
-console.log(arr)
+// let arr = [2,4,5,1,2,55,3,123,56,7]
+// SelectionSort(arr)
+// console.log(arr)

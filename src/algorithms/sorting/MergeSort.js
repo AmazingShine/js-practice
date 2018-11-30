@@ -10,15 +10,15 @@ function merge(left, right) {
     return tem.concat(left,right);  // 一边先结束需要加入另一边的值
 }
 
-function MergeSort(arr) {
-    if (arr.length == 1)    // 递归结束条件
+export default function mergeSort(arr) {
+    if (arr.length <= 1)    // 递归结束条件
         return arr;
     let mid = parseInt(arr.length / 2)
     let left = arr.slice(0, mid)
     let right = arr.slice(mid)
-    return merge(MergeSort(left), MergeSort(right))
+    return merge(mergeSort(left), mergeSort(right))
 }
 
-let arr = [2, 342, 234, 11, 234, 533, 12, 3, 4, 63, 21]
+// let arr = [2, 342, 234, 11, 234, 533, 12, 3, 4, 63, 21]
 
-console.log(MergeSort(arr))
+// console.log(MergeSort(arr))
