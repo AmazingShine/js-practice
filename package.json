@@ -7,7 +7,7 @@
     "dev": "webpack-dev-server --mode development",
     "dev-o": "webpack-dev-server --open --mode development",
     "test": "jest",
-    "test-all": "jest --watchAll --coverage"
+    "test-all": "jest --watchAll --coverage --config=test/jest.config.js"
   },
   "author": "",
   "license": "ISC",
