@@ -4,7 +4,7 @@ const path = require("path")
 
 module.exports = {
     rootDir: path.resolve(__dirname, '../../'),
-    testMatch: ["**/__tests__/**/*.js?(x)", "**/linked-list/__test__/?(*.)+(spec|test).js?(x)"],
+    testMatch: ["**/__tests__/**/*.js?(x)", "**/stack/__test__/?(*.)+(spec|test).js?(x)"],
     // All imported modules in your tests should be mocked automatically
     // automock: false,
 
